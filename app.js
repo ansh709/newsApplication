@@ -32,8 +32,11 @@ AllData = () => {
 }
 document.addEventListener("DOMContentLoaded", AllData);
 
-if("serviceWorker" in navigator){
-	window.addEventListener("load",function(){
-		navigator.serviceWorker.register("serviceWorker.js").then(res => console.log("service worker ragisterd")).catch(err => console.log("service worker not ragisterd", err));	
-	});
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("serviceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err));
+  });
 }
